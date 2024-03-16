@@ -12,11 +12,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@RequiredArgsConstructor
-@Slf4j
 @Service
+@Slf4j
+@RequiredArgsConstructor
 public class ProductService {
-
     private final ProductRepository productRepository;
 
     public List<Product> listProducts(String title) {
@@ -34,7 +33,7 @@ public class ProductService {
             product.addImageToProduct(image1);
         }
         if (file2.getSize() != 0) {
-            image2 = toImageEntity(file1);
+            image2 = toImageEntity(file2);
             product.addImageToProduct(image2);
         }
         if (file3.getSize() != 0) {
